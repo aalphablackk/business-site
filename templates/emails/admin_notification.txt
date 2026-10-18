@@ -1,0 +1,9 @@
+
+New website contact inquiry
+
+Name: {{ first_name }} {{ last_name }}
+Email: {{ email }}
+Phone: {{ phone|default:"Not provided" }}
+
+Message:
+{{ message }}

@@ -1,0 +1,13 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<body style="font-family:Arial,sans-serif;color:#30223f;line-height:1.6;">
+    <h2 style="color:#30223f;">New website inquiry</h2>
+    <p><strong>Name:</strong> {{ first_name }} {{ last_name }}</p>
+    <p><strong>Email:</strong> {{ email }}</p>
+    <p><strong>Phone:</strong> {{ phone|default:"Not provided" }}</p>
+    <hr>
+    <h3>Message</h3>
+    <p style="white-space:pre-wrap;">{{ message }}</p>
+</body>
+</html>

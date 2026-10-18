@@ -1,0 +1,9 @@
+
+Hello {{ first_name }},
+
+Thank you for contacting us. We've received your message and appreciate you getting in touch.
+
+Our team will review your inquiry and get back to you as soon as possible.
+
+Best regards,
+TDB Communications
