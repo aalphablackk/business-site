@@ -3,7 +3,9 @@
 
 <nav class="navbar navbar-expand-lg site-navbar">
     <div class="container site-container">
-        <a class="navbar-brand site-brand" href="{% url 'website:contact' %}" aria-label="TDB home">
+        <a class="navbar-brand site-brand"
+           href="{% url 'website:contact' %}"
+           aria-label="TDB home">
             TDB<span class="brand-polygon" aria-hidden="true"></span>
         </a>
 
@@ -16,24 +18,70 @@
 
         <div class="collapse navbar-collapse" id="siteNavigation">
             <ul class="navbar-nav ms-auto">
+
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'website:contact' %}">Home</a>
+                    <a class="nav-link"
+                       href="{% url 'website:contact' %}">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#services">Services</a>
+
+                <li class="nav-item dropdown nav-hover-dropdown">
+                    <a class="nav-link dropdown-toggle"
+                       href="#services"
+                       id="servicesDropdown"
+                       role="button"
+                       data-bs-toggle="dropdown"
+                       aria-expanded="false">
+                        Services
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                        <li><a class="dropdown-item" href="#healthcare">Healthcare Services</a></li>
+                        <li><a class="dropdown-item" href="#general-support">General Program Support</a></li>
+                        <li><a class="dropdown-item" href="#legal">Legal</a></li>
+                        <li><a class="dropdown-item" href="#foia">FOIA</a></li>
+                    </ul>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#successes">Successes</a>
+
+                <li class="nav-item dropdown nav-hover-dropdown">
+                    <a class="nav-link dropdown-toggle"
+                       href="#successes"
+                       id="successesDropdown"
+                       role="button"
+                       data-bs-toggle="dropdown"
+                       aria-expanded="false">
+                        Successes
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="successesDropdown">
+                        <li><a class="dropdown-item" href="#testimonials">Testimonials</a></li>
+                    </ul>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#about">About Us</a>
+
+                <li class="nav-item dropdown nav-hover-dropdown">
+                    <a class="nav-link dropdown-toggle"
+                       href="#about"
+                       id="aboutDropdown"
+                       role="button"
+                       data-bs-toggle="dropdown"
+                       aria-expanded="false">
+                        About Us
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                        <li class="dropdown-header">Leadership</li>
+                        <li><a class="dropdown-item" href="#thomas-duckenfield">Thomas Duckenfield</a></li>
+                        <li><a class="dropdown-item" href="#ashley-olive">Ashley Olive</a></li>
+                        <li class="dropdown-header">History</li>
+                    </ul>
                 </li>
+
                 <li class="nav-item">
                     <a class="nav-link" href="#careers">Careers</a>
                 </li>
+
                 <li class="nav-item">
-                    <a class="nav-link active" href="{% url 'website:contact' %}" aria-current="page">Contact</a>
+                    <a class="nav-link active"
+                       href="{% url 'website:contact' %}"
+                       aria-current="page">Contact</a>
                 </li>
+
             </ul>
         </div>
     </div>

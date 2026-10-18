@@ -26,7 +26,7 @@ def send_contact_emails(data):
                 f"{context['last_name']}",
         body=admin_text,
         from_email=settings.DEFAULT_FROM_EMAIL,
-        to=[settings.CONTACT_RECIPIENT_EMAIL],
+        to=settings.CONTACT_RECIPIENT_EMAILS,
         reply_to=[context["email"]],
     )
     admin_email.attach_alternative(admin_html, "text/html")

@@ -330,3 +330,62 @@ main {
 .contact-form .alert {
     border-radius: var(--radius-control);
 }
+
+/* Navbar dropdowns */
+.site-navbar .nav-hover-dropdown {
+    position: relative;
+}
+
+.site-navbar .dropdown-menu {
+    margin-top: 0;
+    padding: 0.25rem 0;
+    min-width: 220px;
+    border: 0;
+    border-radius: 0;
+    background: #fff;
+    box-shadow: none;
+    text-align: right;
+}
+
+.site-navbar .dropdown-item,
+.site-navbar .dropdown-header {
+    padding: 0.45rem 1.25rem;
+    color: #9aab94;
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    line-height: 1.35;
+    white-space: normal;
+}
+
+.site-navbar .dropdown-item:hover,
+.site-navbar .dropdown-item:focus {
+    color: var(--color-accent);
+    background: #f5f3f7;
+}
+
+.site-navbar .dropdown-header {
+    color: #9aab94;
+    text-transform: uppercase;
+}
+
+@media (min-width: 992px) {
+    .site-navbar .nav-hover-dropdown:hover > .dropdown-menu {
+        display: block;
+    }
+
+    .site-navbar .nav-hover-dropdown > .nav-link::after {
+        display: none;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .site-navbar .dropdown-menu {
+        margin: 0 0 0.5rem;
+        background: var(--color-navbar);
+    }
+
+    .site-navbar .dropdown-item,
+    .site-navbar .dropdown-header {
+        text-align: left;
+    }
+}

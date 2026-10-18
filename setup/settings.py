@@ -150,9 +150,14 @@ DEFAULT_FROM_EMAIL = config(
     default="website@example.com",
 )
 
-CONTACT_RECIPIENT_EMAIL = config(
-    "CONTACT_RECIPIENT_EMAIL",
+CONTACT_RECIPIENT_EMAILS = config(
+    "CONTACT_RECIPIENT_EMAILS",
     default="owner@example.com",
+    cast=lambda value: [
+        email.strip()
+        for email in value.split(",")
+        if email.strip()
+    ],
 )
 
 if not DEBUG:
